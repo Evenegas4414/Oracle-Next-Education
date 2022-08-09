@@ -31,11 +31,15 @@ function encriptar() {
         }
     }
 
-    document.getElementById("texto-imagen").style.display = "none";
+    if (textoEncriptado.length != 0) {
 
-    document.getElementById("texto-mostrado").innerHTML = textoEncriptado;
-    document.getElementById("texto-mostrado").style.display = "block";
-    document.getElementById("boton-copiar").style.display = "block";
+        document.getElementById("texto-imagen").style.display = "none";
+
+        document.getElementById("texto-mostrado").innerHTML = textoEncriptado;
+        document.getElementById("texto-mostrado").style.display = "block";
+        document.getElementById("boton-copiar").style.display = "block";
+        
+    }
 
 }
 
@@ -49,7 +53,7 @@ function desincriptar() {
             case "a":
                 if (texto.slice(i, i + codigoA.length) === codigoA) {
                     textoDesincriptado += "a";
-                    i += codigoA.length -1;
+                    i += codigoA.length - 1;
                 } else {
                     textoDesincriptado += texto[i];
                 }
@@ -57,7 +61,7 @@ function desincriptar() {
             case "e":
                 if (texto.slice(i, i + codigoE.length) === codigoE) {
                     textoDesincriptado += "e";
-                    i += codigoE.length -1;
+                    i += codigoE.length - 1;
                 } else {
                     textoDesincriptado += texto[i];
                 }
@@ -65,7 +69,7 @@ function desincriptar() {
             case "i":
                 if (texto.slice(i, i + codigoI.length) === codigoI) {
                     textoDesincriptado += "i";
-                    i += codigoI.length -1;
+                    i += codigoI.length - 1;
                 } else {
                     textoDesincriptado += texto[i];
                 }
@@ -73,7 +77,7 @@ function desincriptar() {
             case "o":
                 if (texto.slice(i, i + codigoO.length) === codigoO) {
                     textoDesincriptado += "o";
-                    i += codigoO.length -1;
+                    i += codigoO.length - 1;
                 } else {
                     textoDesincriptado += texto[i];
                 }
@@ -81,7 +85,7 @@ function desincriptar() {
             case "u":
                 if (texto.slice(i, i + codigoU.length) === codigoU) {
                     textoDesincriptado += "u";
-                    i += codigoU.length -1;
+                    i += codigoU.length - 1;
                 } else {
                     textoDesincriptado += texto[i];
                 }
@@ -91,11 +95,16 @@ function desincriptar() {
         }
     }
 
-    document.getElementById("texto-imagen").style.display = "none";
+    if (textoDesincriptado.length != 0) {
 
-    document.getElementById("texto-mostrado").innerHTML = textoDesincriptado;
-    document.getElementById("texto-mostrado").style.display = "block";
-    document.getElementById("boton-copiar").style.display = "block";
+        document.getElementById("texto-imagen").style.display = "none";
+
+        document.getElementById("texto-mostrado").innerHTML = textoDesincriptado;
+        document.getElementById("texto-mostrado").style.display = "block";
+        document.getElementById("boton-copiar").style.display = "block";
+
+    }
+
 
 }
 
